@@ -474,9 +474,9 @@ class MixinApplicatorStandard {
                 Annotations.merge(shadow, target);
                 
                 // Strip the FINAL flag from @Mutable fields
-                if (entry.getValue().isDecoratedMutable()) {
+                // if (entry.getValue().isDecoratedMutable()) {
                     target.access &= ~Opcodes.ACC_FINAL;
-                }
+                // }
             }
         }
     }

@@ -71,9 +71,9 @@ public class AccessorGeneratorFieldSetter extends AccessorGeneratorField {
      */
     @Override
     public MethodNode generate() {
-        if (this.mutable) {
+        // if (this.mutable) {
             this.targetField.access &= ~Opcodes.ACC_FINAL;
-        }
+        //}
         
         int stackSpace = this.targetIsStatic ? 0 : 1; // Stack space for "this"
         int maxLocals = stackSpace + this.targetType.getSize();
